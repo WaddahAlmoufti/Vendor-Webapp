@@ -1,0 +1,54 @@
+doctype html
+html 
+    head 
+        title#itemID #{result._id}
+        a(href= "/home") Home
+        |
+        |
+        |
+        a(href="/items") Item Selection
+        |
+        |
+        |
+        a(href= "/additem") Add New Item
+        |
+        |
+        |
+        a(href= "/bulk") Bulk Page
+        br
+    body
+        div#central
+
+            p Name:
+                input#itemName(type="textbox", value = result.name)
+
+            p Category:
+                input#itemCat(type="textbox", value = result.category)
+
+            p Vendor:
+                input#itemVen(type="textbox", value = result.vendor)
+
+            p Price:
+                input#itemPrice(type="textbox", value = result.price)
+            
+            p Stock: 
+                input#itemStock(type="textbox", value = result.stock)
+
+            p Description: 
+                input#itemDesc(type="textbox", value = result.description)
+            
+            br
+            br
+
+            p Current Rating: #{star}
+
+            p Add Rating: 
+                input#itemRating(type="textbox")
+
+            button#update(type="button") Update Data 
+            |
+            |
+            |
+            button#delete(type="button") Delete
+    script 
+        include itemFunction.js      
