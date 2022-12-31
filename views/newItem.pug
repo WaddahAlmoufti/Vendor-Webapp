@@ -1,0 +1,45 @@
+doctype html
+html 
+    head 
+        title#itemID Add Item Page
+        a(href= "/home") Home
+        |
+        |
+        |
+        a(href="/items") Item Selection
+        |
+        |
+        |
+        a(href= "/additem") Add New Item
+        |
+        |
+        |
+        a(href= "/bulk") Bulk Page
+        br
+    body
+        h1 Add New Supply Item 
+
+        p Name:
+                input#newItemName(type="textbox")
+
+        p Category:
+            input#newItemCat(type="textbox")
+
+        p Vendor:
+            input#newItemVen(type="textbox")
+
+        p Price:
+            input#newItemPrice(type="textbox")
+            
+        p Stock: 
+            input#newItemStock(type="textbox")
+
+        p Description: 
+            input#newItemDesc(type="textbox")
+            
+        br
+        br
+
+        button#addNewItem(type="button") Add Item
+    script 
+        include addItem.js
