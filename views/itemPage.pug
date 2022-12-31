@@ -1,0 +1,25 @@
+doctype html
+html 
+    head 
+        title Items Page
+        a(href= "/home") Home
+        |
+        |
+        |
+        a(href="/items") Item Selection
+        |
+        |
+        |
+        a(href= "/additem") Add New Item
+        |
+        |
+        |
+        a(href= "/bulk") Bulk Page
+        br
+    body
+        h1 Supply List
+        div#page
+            each item in supplies
+                a(href = "/items/" + item._id) #{item.name}
+                br
+                br
