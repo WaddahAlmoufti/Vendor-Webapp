@@ -1,0 +1,40 @@
+doctype html
+html 
+    head 
+        title#itemID Add Item Page
+        a(href= "/home") Home
+        |
+        |
+        |
+        a(href="/items") Item Selection
+        |
+        |
+        |
+        a(href= "/additem") Add New Item
+        |
+        |
+        |
+        a(href= "/bulk") Bulk Page
+        br
+    body
+        h1 Bulk Page
+
+        p Vendor:
+            input#bulkItemVendor(type="textbox")
+
+        p Category:
+            input#bulkItemCat(type="textbox")
+
+        p Stock:
+            input#bulkItemStock(type="textbox")
+
+        p Sales Percentage (0-100):
+            input#bulkItemSale(type="textbox")
+
+        button#incStock(type="button") Stock
+        |
+        |
+        |
+        button#Sale(type="button") Sale
+    script 
+        include bulkFunction.js
